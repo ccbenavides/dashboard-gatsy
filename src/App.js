@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState }  from 'react';
 import './App.css';
 
 function App() {
+  const [contador, contadorSet ] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Hola Mundo</h1>
+        <span className='text-lg'>{contador}</span>
+        <br />
+        <button onClick={ () => contadorSet(contador+ 1) } >incrementar</button>
+
+        <button onClick={ () => contadorSet(contador- 1) }>Decrementar</button>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente minus voluptatum optio, officiis, repellendus praesentium explicabo quo libero blanditiis esse corporis, eaque vitae dolorum reprehenderit doloremque porro amet est molestias.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
